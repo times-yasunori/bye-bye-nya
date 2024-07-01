@@ -33,6 +33,11 @@
   </script>
 </body>
 <style>
+  :root {
+    --light-bg: #fff;
+    --dark-bg: #000;
+  }
+
   .container {
     display: grid;
     place-content: center;
@@ -47,17 +52,22 @@
     display: none;
   }
 
-  #githublink>a {
-    color: #fff
+  body {
+    background-color: var(--light-bg);
   }
+
+  #githublink>a {
+    color: var(--light-bg);
+  }
+
 
   @media (prefers-color-scheme: dark) {
     body {
-      background-color: #000;
+      background-color: var(--dark-bg);
     }
 
     #githublink>a {
-      color: #000
+      color: var(--dark-bg);
     }
 </style>
 
