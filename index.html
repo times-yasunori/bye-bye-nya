@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bye Bye Nya!</title>
+</head>
+
+<!-- https://github.com/ryoppippi/bye-bye-win-nya -->
+
+<body>
+  <div class="container">
+    <img id="byebye-nya" src="./assets/byebye-nya.gif" data-show="false" />
+    <img id="good-nya" src="./assets/good-nya.gif" data-show="false" />
+  </div>
+
+  <script type="module">
+    const $ = document.querySelector.bind(document);
+
+    const byeByeNya = $("#byebye-nya");
+    const goodNya = $("#good-nya");
+
+    function isWindodws() {
+      return window.navigator.userAgent.includes("Windows");
+    }
+
+    if (isWindodws()) {
+      byeByeNya.dataset.show = "true";
+    } else {
+      goodNya.dataset.show = "true";
+    }
+  </script>
+</body>
+<style>
+  .container {
+    display: grid;
+    place-content: center;
+    place-items: center;
+  }
+
+  img[data-show="true"] {
+    display: block;
+  }
+
+  img[data-show="false"] {
+    display: none;
+  }
+</style>
+
+</html>
