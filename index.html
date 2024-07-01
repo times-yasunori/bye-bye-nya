@@ -7,12 +7,12 @@
   <title>Bye Bye Nya!</title>
 </head>
 
-<!-- https://github.com/ryoppippi/bye-bye-win-nya -->
 
 <body>
   <div class="container">
     <img id="byebye-nya" src="./assets/byebye-nya.gif" data-show="false" />
     <img id="good-nya" src="./assets/good-nya.gif" data-show="false" />
+    <p id="githublink"> <a href="https://github.com/ryoppippi/bye-bye-nya">Source Code</a> </p>
   </div>
 
   <script type="module">
@@ -47,9 +47,17 @@
     display: none;
   }
 
+  #githublink>a {
+    color: #fff
+  }
+
   @media (prefers-color-scheme: dark) {
     body {
       background-color: #000;
+    }
+
+    #githublink>a {
+      color: #000
     }
 </style>
 
